@@ -1,0 +1,18 @@
+/* 1. Kita ganti ke Noto Sans (Fallback resmi Discord) */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../node_modules/flowbite-react/class-list.json";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html, body {
+    @apply bg-[#313338] m-0 p-0 text-white;
+    font-family: 'Noto Sans', sans-serif;
+    /* 2. Ini rahasianya biar font lu tajam dan nggak "berbulu" */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
