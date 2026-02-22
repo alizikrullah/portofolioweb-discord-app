@@ -9,15 +9,15 @@ function SignIn({ onSwitchToSignUp, onSwitchToHome }: { onSwitchToSignUp: () => 
   }, []);
   
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[#1e1f22] p-4">
+    <div className="flex flex-col min-h-screen items-center justify-center bg-[#1e1f22] p-4 relative">
       {/* Container utama */}
       <div className="max-w-[480px] w-full bg-[#313338] p-8 rounded-md shadow-lg">
         {/* LOGO POJOK KIRI ATAS */}
         <img 
-          src={wideLogo} 
-          alt="Discord Logo" 
-          onClick={onSwitchToHome}
-          className="absolute top-10 left-10 w-45 cursor-pointer hover:scale-105 transition-transform" 
+        src={wideLogo} 
+        alt="Discord Logo" 
+        onClick={onSwitchToHome}
+        className="w-36 mb-8 md:mb-0 md:absolute md:top-10 md:left-10 cursor-pointer hover:scale-105 transition-transform" 
         />
         {/* Bagian Header Sign-In */}
         <div className="text-center mb-6">

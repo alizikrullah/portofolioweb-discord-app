@@ -8,13 +8,13 @@ function SignUp({ onSwitchToSignIn, onSwitchToHome }: { onSwitchToSignIn: () => 
   }, []);
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-[#1e1f22] p-4">
+    <div className="flex flex-col min-h-screen items-center justify-center bg-[#1e1f22] p-4 relative">
       {/* LOGO POJOK KIRI ATAS */}
         <img 
-          src={wideLogo} 
-          alt="Discord Logo" 
-          onClick={onSwitchToHome}
-          className="absolute top-10 left-10 w-45 cursor-pointer hover:scale-105 transition-transform" 
+        src={wideLogo} 
+        alt="Discord Logo" 
+        onClick={onSwitchToHome}
+        className="w-36 mb-8 md:mb-0 md:absolute md:top-10 md:left-10 cursor-pointer hover:scale-105 transition-transform" 
         />
 
       <div className="max-w-[480px] w-full bg-[#313338] p-8 rounded-md shadow-lg">
@@ -22,9 +22,9 @@ function SignUp({ onSwitchToSignIn, onSwitchToHome }: { onSwitchToSignIn: () => 
           <h2 className="text-2xl font-bold text-white">Create an account</h2>
         </div>
         
-        <form className="flex flex-col gap-3">
+        <form className="flex flex-col gap-4">
           <div>
-            <Label htmlFor="email" className="text-[#B5BAC1] text-[14px] mb-2 block">Email *</Label>
+            <Label htmlFor="email" className="text-[#B5BAC1] text-[14px] mb-2 block">Email <span className="text-red-500">*</span></Label>
             <TextInput 
               id="email" 
               type="email" 
@@ -34,7 +34,7 @@ function SignUp({ onSwitchToSignIn, onSwitchToHome }: { onSwitchToSignIn: () => 
           </div>
 
           <div>
-            <Label htmlFor="displayName" className="text-[#B5BAC1] text-[14px] mb-2 block">Display Name</Label>
+            <Label htmlFor="displayName" className="text-[#B5BAC1] text-[14px] mb-2 block">Display Name <span className="text-red-500">*</span></Label>
             <TextInput 
               id="displayName" 
               type="text" 
@@ -43,7 +43,7 @@ function SignUp({ onSwitchToSignIn, onSwitchToHome }: { onSwitchToSignIn: () => 
           </div>
           
           <div>
-            <Label htmlFor="username" className="text-[#B5BAC1] text-[14px] mb-2 block">Username *</Label>
+            <Label htmlFor="username" className="text-[#B5BAC1] text-[14px] mb-2 block">Username <span className="text-red-500">*</span></Label>
             <TextInput 
               id="username" 
               type="text" 
@@ -53,7 +53,7 @@ function SignUp({ onSwitchToSignIn, onSwitchToHome }: { onSwitchToSignIn: () => 
           </div>
 
           <div>
-            <Label htmlFor="password" className="text-[#B5BAC1] text-[14px] mb-2 block">Password *</Label>
+            <Label htmlFor="password" className="text-[#B5BAC1] text-[14px] mb-2 block">Password <span className="text-red-500">*</span></Label>
             <TextInput 
               id="password" 
               type="password" 
@@ -63,11 +63,11 @@ function SignUp({ onSwitchToSignIn, onSwitchToHome }: { onSwitchToSignIn: () => 
           </div>
 
           <div>
-            <Label className="text-[#B5BAC1] text-[14px] mb-2 block">Date of Birth *</Label>
+            <Label className="text-[#B5BAC1] text-[14px] mb-2 block">Date of Birth <span className="text-red-500">*</span></Label>
             <div className="flex gap-3">
-              <Select id="month" className="flex-1 [&_select]:bg-[#1e1f22] [&_select]:text-[#B5BAC1] [&_select]:border-gray-600 [&_select]:focus:ring-1 [&_select]:focus:ring-blue-500 [&_select]:py-2 [&_select]:rounded-md"><option>Month</option></Select>
-              <Select id="day" className="flex-1 [&_select]:bg-[#1e1f22] [&_select]:text-[#B5BAC1] [&_select]:border-gray-600 [&_select]:focus:ring-1 [&_select]:focus:ring-blue-500 [&_select]:py-2 [&_select]:rounded-md"><option>Day</option></Select>
-              <Select id="year" className="flex-1 [&_select]:bg-[#1e1f22] [&_select]:text-[#B5BAC1] [&_select]:border-gray-600 [&_select]:focus:ring-1 [&_select]:focus:ring-blue-500 [&_select]:py-2 [&_select]:rounded-md"><option>Year</option></Select>
+              <Select id="month" className="flex-1 [&_select]:bg-[#1e1f22] [&_select]:text-[#B5BAC1] [&_select]:border-gray-600 [&_select]:focus:ring-1 [&_select]:focus:ring-blue-500 [&_select]:py-2 [&_select]:rounded-md [&_select]:pl-1.5"><option>Month</option></Select>
+              <Select id="day" className="flex-1 [&_select]:bg-[#1e1f22] [&_select]:text-[#B5BAC1] [&_select]:border-gray-600 [&_select]:focus:ring-1 [&_select]:focus:ring-blue-500 [&_select]:py-2 [&_select]:rounded-md [&_select]:pl-1.5"><option>Day</option></Select>
+              <Select id="year" className="flex-1 [&_select]:bg-[#1e1f22] [&_select]:text-[#B5BAC1] [&_select]:border-gray-600 [&_select]:focus:ring-1 [&_select]:focus:ring-blue-500 [&_select]:py-2 [&_select]:rounded-md [&_select]:pl-1.5"><option>Year</option></Select>
             </div>
           </div>
 

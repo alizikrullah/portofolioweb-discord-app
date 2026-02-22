@@ -16,7 +16,7 @@ function App() {
     <div className="flex flex-col items-center justify-center min-h-screen bg-[#23272A] text-white">
       <div className="flex flex-col items-center">
         <img src="./logo-discord.svg" className="w-32 h-auto hover:scale-110 transition-transform cursor-pointer" alt="Discord logo" />
-        <h1 className="text-5xl font-bold mt-4">Welcome to Discord!</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mt-4 mb-3 text-center">Welcome to Discord!</h1>
       </div>
 
       <div className="flex gap-4 mt-6">
