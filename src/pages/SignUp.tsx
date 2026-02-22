@@ -8,108 +8,112 @@ function SignUp({ onSwitchToSignIn, onSwitchToHome }: { onSwitchToSignIn: () => 
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen items-center justify-center bg-[#1e1f22] p-4 relative">
-      {/* LOGO POJOK KIRI ATAS */}
+    <div className="flex flex-col min-h-screen  bg-[#1e1f22]">
+      <header className="w-full p-8 md:px-10 md:pt-10 flex justify-center md:justify-start shrink-0">
         <img 
-        src={wideLogo} 
-        alt="Discord Logo" 
-        onClick={onSwitchToHome}
-        className="w-36 mb-8 md:mb-0 md:absolute md:top-10 md:left-10 cursor-pointer hover:scale-105 transition-transform" 
+          src={wideLogo} 
+          alt="Discord Logo" 
+          onClick={onSwitchToHome}
+          className="w-36 cursor-pointer hover:scale-105 transition-transform" 
         />
+      </header>
 
-      <div className="max-w-[480px] w-full bg-[#313338] p-8 rounded-md shadow-lg">
-        <div className="text-center mb-6">
-          <h2 className="text-2xl font-bold text-white">Create an account</h2>
-        </div>
-        
-        <form className="flex flex-col gap-4">
-          <div>
-            <Label htmlFor="email" className="text-[#B5BAC1] text-[14px] mb-2 block">Email <span className="text-red-500">*</span></Label>
-            <TextInput 
-              id="email" 
-              type="email" 
-              required 
-              className="[&_input]:bg-[#1e1f22] [&_input]:text-white [&_input]:border-gray-600 [&_input]:focus:ring-1 [&_input]:focus:ring-blue-500 [&_input]:p-2 [&_input]:rounded-md" 
-            />
-          </div>
+      <main className="flex-1 flex items-center justify-center p-4 pb-12">
 
-          <div>
-            <Label htmlFor="displayName" className="text-[#B5BAC1] text-[14px] mb-2 block">Display Name <span className="text-red-500">*</span></Label>
-            <TextInput 
-              id="displayName" 
-              type="text" 
-              className="[&_input]:bg-[#1e1f22] [&_input]:text-white [&_input]:border-gray-600 [&_input]:focus:ring-1 [&_input]:focus:ring-blue-500 [&_input]:p-2 [&_input]:rounded-md" 
-            />
+        <div className="max-w-[480px] w-full bg-[#313338] p-8 rounded-md shadow-lg">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl font-bold text-white">Create an account</h2>
           </div>
           
-          <div>
-            <Label htmlFor="username" className="text-[#B5BAC1] text-[14px] mb-2 block">Username <span className="text-red-500">*</span></Label>
-            <TextInput 
-              id="username" 
-              type="text" 
-              required 
-              className="[&_input]:bg-[#1e1f22] [&_input]:text-white [&_input]:border-gray-600 [&_input]:focus:ring-1 [&_input]:focus:ring-blue-500 [&_input]:p-2 [&_input]:rounded-md" 
-            />
-          </div>
-
-          <div>
-            <Label htmlFor="password" className="text-[#B5BAC1] text-[14px] mb-2 block">Password <span className="text-red-500">*</span></Label>
-            <TextInput 
-              id="password" 
-              type="password" 
-              required 
-              className="[&_input]:bg-[#1e1f22] [&_input]:text-white [&_input]:border-gray-600 [&_input]:focus:ring-1 [&_input]:focus:ring-blue-500 [&_input]:p-2 [&_input]:rounded-md" 
-            />
-          </div>
-
-          <div>
-            <Label className="text-[#B5BAC1] text-[14px] mb-2 block">Date of Birth <span className="text-red-500">*</span></Label>
-            <div className="flex gap-3">
-              <Select id="month" className="flex-1 [&_select]:bg-[#1e1f22] [&_select]:text-[#B5BAC1] [&_select]:border-gray-600 [&_select]:focus:ring-1 [&_select]:focus:ring-blue-500 [&_select]:py-2 [&_select]:rounded-md [&_select]:pl-1.5"><option>Month</option></Select>
-              <Select id="day" className="flex-1 [&_select]:bg-[#1e1f22] [&_select]:text-[#B5BAC1] [&_select]:border-gray-600 [&_select]:focus:ring-1 [&_select]:focus:ring-blue-500 [&_select]:py-2 [&_select]:rounded-md [&_select]:pl-1.5"><option>Day</option></Select>
-              <Select id="year" className="flex-1 [&_select]:bg-[#1e1f22] [&_select]:text-[#B5BAC1] [&_select]:border-gray-600 [&_select]:focus:ring-1 [&_select]:focus:ring-blue-500 [&_select]:py-2 [&_select]:rounded-md [&_select]:pl-1.5"><option>Year</option></Select>
+          <form className="flex flex-col gap-4">
+            <div>
+              <Label htmlFor="email" className="text-[#B5BAC1] text-[14px] mb-2 block">Email <span className="text-red-500">*</span></Label>
+              <TextInput 
+                id="email" 
+                type="email" 
+                required 
+                className="[&_input]:bg-[#1e1f22] [&_input]:text-white [&_input]:border-gray-600 [&_input]:focus:ring-1 [&_input]:focus:ring-blue-500 [&_input]:p-2 [&_input]:rounded-md" 
+              />
             </div>
-          </div>
 
-          <div className="flex items-start gap-3">
-            <label htmlFor="marketing" className="relative flex items-center mt-[2px] cursor-pointer">
-              <input id="marketing" type="checkbox" className="peer sr-only" />
-              <div className="w-6 h-6 bg-[#1e1f22] border border-gray-600 rounded flex items-center justify-center peer-checked:bg-[#5865f2] peer-checked:border-[#5865f2] transition-colors [&_svg]:hidden peer-checked:[&_svg]:block">
-                <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
-                </svg>
+            <div>
+              <Label htmlFor="displayName" className="text-[#B5BAC1] text-[14px] mb-2 block">Display Name <span className="text-red-500">*</span></Label>
+              <TextInput 
+                id="displayName" 
+                type="text" 
+                className="[&_input]:bg-[#1e1f22] [&_input]:text-white [&_input]:border-gray-600 [&_input]:focus:ring-1 [&_input]:focus:ring-blue-500 [&_input]:p-2 [&_input]:rounded-md" 
+              />
+            </div>
+            
+            <div>
+              <Label htmlFor="username" className="text-[#B5BAC1] text-[14px] mb-2 block">Username <span className="text-red-500">*</span></Label>
+              <TextInput 
+                id="username" 
+                type="text" 
+                required 
+                className="[&_input]:bg-[#1e1f22] [&_input]:text-white [&_input]:border-gray-600 [&_input]:focus:ring-1 [&_input]:focus:ring-blue-500 [&_input]:p-2 [&_input]:rounded-md" 
+              />
+            </div>
+
+            <div>
+              <Label htmlFor="password" className="text-[#B5BAC1] text-[14px] mb-2 block">Password <span className="text-red-500">*</span></Label>
+              <TextInput 
+                id="password" 
+                type="password" 
+                required 
+                className="[&_input]:bg-[#1e1f22] [&_input]:text-white [&_input]:border-gray-600 [&_input]:focus:ring-1 [&_input]:focus:ring-blue-500 [&_input]:p-2 [&_input]:rounded-md" 
+              />
+            </div>
+
+            <div>
+              <Label className="text-[#B5BAC1] text-[14px] mb-2 block">Date of Birth <span className="text-red-500">*</span></Label>
+              <div className="flex gap-3">
+                <Select id="month" className="flex-1 [&_select]:bg-[#1e1f22] [&_select]:text-[#B5BAC1] [&_select]:border-gray-600 [&_select]:focus:ring-1 [&_select]:focus:ring-blue-500 [&_select]:py-2 [&_select]:rounded-md [&_select]:pl-1.5"><option>Month</option></Select>
+                <Select id="day" className="flex-1 [&_select]:bg-[#1e1f22] [&_select]:text-[#B5BAC1] [&_select]:border-gray-600 [&_select]:focus:ring-1 [&_select]:focus:ring-blue-500 [&_select]:py-2 [&_select]:rounded-md [&_select]:pl-1.5"><option>Day</option></Select>
+                <Select id="year" className="flex-1 [&_select]:bg-[#1e1f22] [&_select]:text-[#B5BAC1] [&_select]:border-gray-600 [&_select]:focus:ring-1 [&_select]:focus:ring-blue-500 [&_select]:py-2 [&_select]:rounded-md [&_select]:pl-1.5"><option>Year</option></Select>
               </div>
-            </label>
+            </div>
 
-            <Label htmlFor="marketing" className="!text-[#B5BAC1] font-normal text-[14px] leading-relaxed cursor-pointer">
-              (Optional) It's okay to send me emails with Discord updates, tips, and special offers. You can opt out at any time.
-            </Label>
-          </div>
+            <div className="flex items-start gap-3">
+              <label htmlFor="marketing" className="relative flex items-center mt-[2px] cursor-pointer">
+                <input id="marketing" type="checkbox" className="peer sr-only" />
+                <div className="w-6 h-6 bg-[#1e1f22] border border-gray-600 rounded flex items-center justify-center peer-checked:bg-[#5865f2] peer-checked:border-[#5865f2] transition-colors [&_svg]:hidden peer-checked:[&_svg]:block">
+                  <svg className="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+              </label>
 
-          <p className="text-[12px] text-[#B5BAC1]">
-            By clicking "Create Account", you agree to Discord's <a href="#" className="text-[#00a8fc] hover:underline">Terms of Service</a> <br></br>and have read the <a href="#" className="text-[#00a8fc] hover:underline">Privacy Policy</a>.
-          </p>
+              <Label htmlFor="marketing" className="!text-[#B5BAC1] font-normal text-[14px] leading-relaxed cursor-pointer">
+                (Optional) It's okay to send me emails with Discord updates, tips, and special offers. You can opt out at any time.
+              </Label>
+            </div>
 
-          <Button 
-            type="submit" 
-            size="lg"
-            className="text-[15px] w-full bg-[#5865f2] hover:bg-[#4752c4] p-2 border-none rounded-md mt-2"
-          >
-            Create Account
-          </Button>
+            <p className="text-[12px] text-[#B5BAC1]">
+              By clicking "Create Account", you agree to Discord's <a href="#" className="text-[#00a8fc] hover:underline">Terms of Service</a> <br></br>and have read the <a href="#" className="text-[#00a8fc] hover:underline">Privacy Policy</a>.
+            </p>
 
-          <button 
-            type="button" 
-            onClick={onSwitchToSignIn} 
-            className="text-[14px] text-[#B5BAC1] mt-1 text-left"
-          >
-            Already have an account?{' '}
-            <span className="text-[#8c94ec] hover:underline cursor-pointer font-medium">
-              Sign-In
-            </span>
-          </button>
-        </form>
-      </div>
+            <Button 
+              type="submit" 
+              size="lg"
+              className="text-[15px] w-full bg-[#5865f2] hover:bg-[#4752c4] p-2 border-none rounded-md mt-2"
+            >
+              Create Account
+            </Button>
+
+            <button 
+              type="button" 
+              onClick={onSwitchToSignIn} 
+              className="text-[14px] text-[#B5BAC1] mt-1 text-left"
+            >
+              Already have an account?{' '}
+              <span className="text-[#8c94ec] hover:underline cursor-pointer font-medium">
+                Sign-In
+              </span>
+            </button>
+          </form>
+        </div>
+      </main>
     </div>
   );
 }
